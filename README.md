@@ -21,5 +21,5 @@ $ npm run build
 
 PhoneGapでプレビュー
 ```
-$ phonegap serve
+$ npm run serve
 ```

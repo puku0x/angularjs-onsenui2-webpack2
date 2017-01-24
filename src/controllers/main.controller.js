@@ -3,4 +3,3 @@ export default class MainController {
         this.title = 'hello'
     }
 }
-
