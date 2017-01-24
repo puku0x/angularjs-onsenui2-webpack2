@@ -6,12 +6,14 @@ import 'onsenui/css/onsen-css-components.css'
 window.ons = require('onsenui/js/onsenui')
 
 // コントローラ
-import MainController from './controllers/main.controller'
+import Page1Controller from './controllers/page1.controller'
+import Page2Controller from './controllers/page2.controller'
 
 // Angularモジュール
 angular
     .module('app', ['onsen'])
-    .controller('MainController', MainController);
+    .controller('Page1Controller', Page1Controller)
+    .controller('Page2Controller', Page2Controller);
 
 // OnsenUIのAngularバインディングのロードタイミング調整用
 angular.element(document).ready(function() {

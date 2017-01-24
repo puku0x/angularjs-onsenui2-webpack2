@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.1",
-    "onsenui": "2.0.0-rc.19"
+    "onsenui": "2.0.0-rc.17"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
