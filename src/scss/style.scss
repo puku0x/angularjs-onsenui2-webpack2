@@ -1,0 +1,12 @@
+/* テーマカラー*/
+$primary: #1976D2;
+
+/* ボタン */
+.button, button:active, .button--material, .button--material:active {
+    background-color: $primary;
+}
+
+/* ナビゲーションバー */
+.navigation-bar--material {
+    background-color: $primary;
+}

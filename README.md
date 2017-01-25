@@ -1,25 +1,26 @@
-# angular-onsenui2-es2015
+# AngularJS + Onsen UI 2 + PhoneGap + ES2015 + Sass + Webpack
+
+PhoneGap を使ったハイブリッドアプリのひな形に Webpack による Sass と ES2015 のトランスパイルを組み込んだもの。
+
+ビルドシステムは npm と Webpack のみ。
+
+フロントエンドのフレームワークは Angular 1.x と Onsen UI 2 を採用しています。
 
 ## 必要なもの
 - Node.js
 
 ## 使い方
-PhoneGapをインストール
-```
-$ npm install -g phonegap
-```
-
 依存パッケージをインストール
 ```
 $ npm install
 ```
 
-Webpackビルドを実行
+ビルド & プレビュー
 ```
-$ npm run build
+$ npm start
 ```
+これだけ！
 
-PhoneGapでプレビュー
-```
-$ npm run serve
-```
+開発中のアプリは http://localhost:3000 からプレビュー可能。
+
+`/src`内または、`/www`内のファイルに変更を加えると自動的にリロードがかかります。

@@ -1,16 +1,17 @@
-import webpack from 'webpack'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import webpack from 'webpack';
+import autoprefixer from 'autoprefixer';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 export default {
     entry: {
-        bundle: './src/app.js',
+        bundle: './src/js/app.js',
     },
     output: {
         path: __dirname + '/www/assets',
         filename: '[name].js',
     },
     resolve: {
-        extentions: ['', '.js', 'scss']
+        extentions: ['', '.js', '.scss']
     },
     devtool: 'inline-source-map',
     plugins: [
@@ -25,8 +26,10 @@ export default {
     module: {
         loaders: [{
             test: /\.css$/,
-            //loaders: ['style-loader', 'css-loader']
             loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+        }, {
+            test: /\.scss$/,
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!sass-loader'),
         }, {
             test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
             loader: 'file'
@@ -38,5 +41,8 @@ export default {
     },
     devServer: {
         inline: true,
+    },
+    postcss: function() {
+        return [autoprefixer];
     }
 }
