@@ -1,7 +1,8 @@
 export default class Page2Controller {
     constructor($log) {
         'ngInject';
-        this.title = 'Page 2';
+        const args = navi.topPage.pushedOptions;
+        this.title = args.title;
         this.$log = $log;
     }
 
