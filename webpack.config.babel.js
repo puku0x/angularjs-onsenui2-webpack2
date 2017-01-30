@@ -5,6 +5,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 export default {
     entry: {
         bundle: './src/js/app.js',
+        vendor: ['angular', 'onsenui'],
     },
     output: {
         path: __dirname + '/www/assets',
@@ -13,17 +14,20 @@ export default {
     resolve: {
         extentions: ['', '.js', '.scss']
     },
-    devtool: 'inline-source-map',
+    devtool: '#inline-source-map',
     plugins: [
         new ExtractTextPlugin('[name].css', {
             allChunks: true
         }),
         // new webpack.optimize.UglifyJsPlugin()
         // new webpack.ProvidePlugin({
-        //     ons: "onsenui"
-        // })
+        //     angular: "angular",
+        //     ons: "onsenui",
+        // }),
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
     ],
     module: {
+        noParse: [__dirname + 'node_modules/onsenui/onsenui.js'],
         loaders: [{
             test: /\.css$/,
             loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
@@ -32,7 +36,7 @@ export default {
             loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!sass-loader'),
         }, {
             test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
-            loader: 'file'
+            loader: 'file-loader'
         }, {
             test: /\.js$/,
             exclude: /(node_modules|bower_components)/,
@@ -42,7 +46,7 @@ export default {
     devServer: {
         inline: true,
     },
-    postcss: function() {
+    postcss: () => {
         return [autoprefixer];
     }
 }

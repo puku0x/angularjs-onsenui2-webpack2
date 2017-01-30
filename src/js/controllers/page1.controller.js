@@ -1,10 +1,14 @@
 export default class Page1Controller {
     constructor($log) {
+        // DI
         'ngInject';
-        this.title = 'Page 1';
         this.$log = $log;
+
+        // ページタイトル
+        this.title = 'Page 1';
     }
 
+    // 次へ
     push() {
         const options = {
             title: 'Page 2',

@@ -2,7 +2,7 @@
 
 PhoneGap を使ったハイブリッドアプリのひな形に Webpack による Sass と ES2015 のトランスパイルを組み込んだもの。
 
-ビルドシステムは npm と Webpack のみ。
+ビルドツールは npm と Webpack のみ。
 
 フロントエンドのフレームワークは Angular 1.x と Onsen UI 2 を採用しています。
 
@@ -12,7 +12,7 @@ PhoneGap を使ったハイブリッドアプリのひな形に Webpack によ�
 ## 使い方
 依存パッケージをインストール
 ```
-$ npm install
+$ npm i
 ```
 
 ビルド & プレビュー
