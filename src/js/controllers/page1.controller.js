@@ -11,9 +11,16 @@ export default class Page1Controller {
     // 次へ
     push() {
         const options = {
-            title: 'Page 2',
+            data: {
+                title: 'Page 2'
+            }
         };
         navi.pushPage('pages/page2.html', options);
         this.$log.debug('Push page');
+    }
+
+    // 初期化
+    init(event) {
+        const page = event.target;
     }
 }
