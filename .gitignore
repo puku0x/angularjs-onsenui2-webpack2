@@ -11,3 +11,8 @@ npm-debug.log
 
 # res
 resources/signing
+
+# VS Code
+.vscode
+/typings
+jsconfig.json

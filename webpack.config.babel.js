@@ -27,7 +27,7 @@ export default {
         new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
     ],
     module: {
-        noParse: [__dirname + 'node_modules/onsenui/onsenui.js'],
+        //noParse: [__dirname + 'node_modules/onsenui/onsenui.js'],
         loaders: [{
             test: /\.css$/,
             loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
