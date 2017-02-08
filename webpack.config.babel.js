@@ -1,4 +1,5 @@
 import webpack from 'webpack';
+import path from 'path';
 import autoprefixer from 'autoprefixer';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
@@ -8,7 +9,7 @@ export default {
         vendor: ['angular', 'onsenui'],
     },
     output: {
-        path: __dirname + '/www/assets',
+        path: path.join(__dirname, '/www/assets'),
         filename: '[name].js',
     },
     resolve: {
@@ -46,7 +47,5 @@ export default {
     devServer: {
         inline: true,
     },
-    postcss: () => {
-        return [autoprefixer];
-    }
+    postcss: () => ([autoprefixer]),
 };
