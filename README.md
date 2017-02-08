@@ -1,20 +1,26 @@
 [![Build Status][travis-ci-image]][travis-ci-url]
 [![Dependency status][david-dm-image]][david-dm-url]
 [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
-# AngularJS + Onsen UI 2 + PhoneGap + ES2015 + Sass + Webpack
+# AngularJS + Onsen UI 2 + PhoneGap + Webpack
 
-PhoneGap を使ったハイブリッドアプリのひな形に Webpack による Sass と ES2015 のトランスパイルを組み込んだもの。
+[PhoneGap](http://phonegap.com/) を使ったハイブリッドアプリのひな形に [Webpack](https://webpack.github.io/) による SCSS と ES2015 のトランスパイルを組み込んだもの。
 
 ビルドツールは npm と Webpack のみ。
 
-フロントエンドのフレームワークは Angular 1.x と Onsen UI 2 を採用しています。
+フロントエンドのフレームワークは [AngularJS](https://angularjs.org/) と [Onsen UI 2](https://onsen.io/) を採用しています。
 
 ## 必要なもの
-- Node.js
+- [Node.js](https://nodejs.org/)
 
 ## 使い方
+リポジトリをクローン
+```
+$ git clone https://github.com/puku0x/angular-onsenui2-es2015.git
+```
+
 依存パッケージをインストール
 ```
+$ cd クローン先のディレクトリ
 $ npm i
 ```
 
@@ -24,9 +30,9 @@ $ npm start
 ```
 これだけ！
 
-開発中のアプリは http://localhost:3000 からプレビュー可能。
+ビルド後、ブラウザで `http://localhost:3000` を開くとプレビューされます。
 
-`/src`内または、`/www`内のファイルに変更を加えると自動的にリロードがかかります。
+`/src`内または、`/www`内のファイルに変更を加えると自動的にリロードされます。
 
 [travis-ci-url]: http://travis-ci.org/puku0x/angular-onsenui2-es2015
 [travis-ci-image]: https://travis-ci.org/puku0x/angular-onsenui2-es2015.svg?branch=master
