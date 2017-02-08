@@ -26,5 +26,5 @@ $ npm start
 
 `/src`内または、`/www`内のファイルに変更を加えると自動的にリロードがかかります。
 
-[travis-ci-img]: https://travis-ci.org/phonegap/phonegap-cli.svg?branch=master
-[travis-ci-url]: http://travis-ci.org/phonegap/phonegap-cli
+[travis-ci-img]: https://travis-ci.org/puku0x/angular-onsenui2-es2015.svg?branch=master
+[travis-ci-url]: http://travis-ci.org/puku0x/angular-onsenui2-es2015
