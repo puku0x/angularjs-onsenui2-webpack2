@@ -1,8 +1,9 @@
 export default class Page1Controller {
-    constructor($log) {
+    constructor($log, $window) {
         // DI
         'ngInject';
         this.$log = $log;
+        this.$window = $window;
 
         // ページタイトル
         this.title = 'Page 1';
@@ -15,12 +16,13 @@ export default class Page1Controller {
                 title: 'Page 2'
             }
         };
-        navi.pushPage('pages/page2.html', options);
+        this.$window.navi.pushPage('pages/page2.html', options);
         this.$log.debug('Push page');
     }
 
     // 初期化
     init(event) {
         const page = event.target;
+        this.$log.debug(page.data);
     }
 }

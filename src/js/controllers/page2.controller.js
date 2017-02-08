@@ -1,13 +1,14 @@
 export default class Page2Controller {
-    constructor($log) {
+    constructor($log, $window) {
         // DI
         'ngInject';
         this.$log = $log;
+        this.$window = $window;
     }
 
     // 戻る
     pop() {
-        navi.popPage();
+        window.navi.popPage();
         this.$log.debug('Pop page');
     }
 
