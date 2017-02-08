@@ -15,7 +15,7 @@
 ## 使い方
 リポジトリをクローン
 ```
-$ git clone https://github.com/puku0x/angular-onsenui2-es2015.git
+$ git clone https://github.com/puku0x/angular-onsenui2-webpack.git
 ```
 
 依存パッケージをインストール
@@ -34,9 +34,9 @@ $ npm start
 
 `/src`内または、`/www`内のファイルに変更を加えると自動的にリロードされます。
 
-[travis-ci-url]: http://travis-ci.org/puku0x/angular-onsenui2-es2015
-[travis-ci-image]: https://travis-ci.org/puku0x/angular-onsenui2-es2015.svg?branch=master
-[david-dm-url]:https://david-dm.org/puku0x/angular-onsenui2-es2015
-[david-dm-image]:https://david-dm.org/puku0x/angular-onsenui2-es2015.svg
-[david-dm-dev-url]:https://david-dm.org/puku0x/angular-onsenui2-es2015?type=dev
-[david-dm-dev-image]:https://david-dm.org/puku0x/angular-onsenui2-es2015/dev-status.svg
+[travis-ci-url]: http://travis-ci.org/puku0x/angular-onsenui2-webpack
+[travis-ci-image]: https://travis-ci.org/puku0x/angular-onsenui2-webpack.svg?branch=master
+[david-dm-url]:https://david-dm.org/puku0x/angular-onsenui2-webpack
+[david-dm-image]:https://david-dm.org/puku0x/angular-onsenui2-webpack.svg
+[david-dm-dev-url]:https://david-dm.org/puku0x/angular-onsenui2-webpack?type=dev
+[david-dm-dev-image]:https://david-dm.org/puku0x/angular-onsenui2-webpack/dev-status.svg
