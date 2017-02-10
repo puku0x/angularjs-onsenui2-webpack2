@@ -9,7 +9,7 @@ module.exports = (env) => ({
   },
   output: {
     path: path.join(__dirname, '/www/assets'),
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
   },
   devtool: '#inline-source-map',
   plugins: [
@@ -18,7 +18,7 @@ module.exports = (env) => ({
       filename: 'vendor.bundle.js'
     }),
     new ExtractTextPlugin({
-      filename: "[name].bundle.css",
+      filename: "bundle.css",
       allChunks: true
     })
   ],

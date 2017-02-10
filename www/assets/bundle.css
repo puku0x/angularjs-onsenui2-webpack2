@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* テーマカラー*/
+/* ボタン */
+.button, .button:active, .button--material, .button--material:active {
+  background-color: #1976D2;
+  -webkit-transform: none;
+          transform: none; }
+
+/* ナビゲーションバー */
+.navigation-bar--material {
+  background-color: #1976D2; }
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJidW5kbGUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
