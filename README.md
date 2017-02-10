@@ -1,7 +1,7 @@
 [![Build Status][travis-ci-image]][travis-ci-url]
 [![Dependency status][david-dm-image]][david-dm-url]
 [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
-# AngularJS + Onsen UI 2 + PhoneGap + Webpack
+# AngularJS + Onsen UI 2 + Webpack 2 + PhoneGap
 
 [PhoneGap](http://phonegap.com/) を使ったハイブリッドアプリのひな形に [Webpack](https://webpack.github.io/) による SCSS と ES2015 のトランスパイルを組み込んだもの。
 
