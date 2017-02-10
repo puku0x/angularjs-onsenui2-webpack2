@@ -3,12 +3,12 @@ export default class Page2Controller {
         // DI
         'ngInject';
         this.$log = $log;
-        this.$window = $window;
+        this.navigator = $window.navi;
     }
 
     // 戻る
     pop() {
-        window.navi.popPage();
+        this.navigator.popPage();
         this.$log.debug('Pop page');
     }
 

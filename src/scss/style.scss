@@ -1,10 +1,9 @@
 /* テーマカラー*/
-$primary: #1976D2;
+$primary: #009688;
 
 /* ボタン */
 .button, .button:active, .button--material, .button--material:active {
     background-color: $primary;
-    transform: none;
 }
 
 /* ナビゲーションバー */

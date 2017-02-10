@@ -3,7 +3,7 @@ export default class Page1Controller {
         // DI
         'ngInject';
         this.$log = $log;
-        this.$window = $window;
+        this.navigator = $window.navi;
 
         // ページタイトル
         this.title = 'Page 1';
@@ -16,7 +16,7 @@ export default class Page1Controller {
                 title: 'Page 2'
             }
         };
-        this.$window.navi.pushPage('pages/page2.html', options);
+        this.navigator.pushPage('pages/page2.html', options);
         this.$log.debug('Push page');
     }
 
