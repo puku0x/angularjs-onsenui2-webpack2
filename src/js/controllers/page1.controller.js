@@ -1,12 +1,10 @@
 export default class Page1Controller {
-    constructor($log, $window) {
+    /* @ngInject */
+    constructor($log, $timeout, $window) {
         // DI
-        'ngInject';
         this.$log = $log;
-        this.navigator = $window.navi;
-
-        // ページタイトル
-        this.title = 'Page 1';
+        this.$window = $window;
+        this.$timeout = $timeout;
     }
 
     // 次へ
@@ -21,8 +19,11 @@ export default class Page1Controller {
     }
 
     // 初期化
-    init(event) {
-        const page = event.target;
-        this.$log.debug(page.data);
+    init() {
+        this.$timeout(() => {
+            // 変数
+            this.navigator = this.$window.navi;
+            this.title = 'Page 1';
+        });
     }
 }

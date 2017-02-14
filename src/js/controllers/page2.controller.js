@@ -1,9 +1,10 @@
 export default class Page2Controller {
-    constructor($log, $window) {
+    /* @ngInject */
+    constructor($log, $timeout, $window) {
         // DI
-        'ngInject';
         this.$log = $log;
-        this.navigator = $window.navi;
+        this.$window = $window;
+        this.$timeout = $timeout;
     }
 
     // 戻る
@@ -13,9 +14,14 @@ export default class Page2Controller {
     }
 
     // 初期化
-    init(event) {
-        // ページタイトル設定
-        const page = event.target;
-        this.title = page.data.title;
+    init() {
+        this.$timeout(() => {
+            // 変数
+            this.navigator = this.$window.navi;
+
+            // ページタイトル設定
+            const page = this.navigator.topPage;
+            this.title = page.data.title;
+        });
     }
 }
