@@ -27,7 +27,7 @@ module.exports = (env) => {
   if (isProd) {
     plugins.push(
       new webpack.LoaderOptionsPlugin({
-        minimize: false,
+        minimize: true,
         debug: false
       }),
       new webpack.optimize.UglifyJsPlugin({
@@ -51,29 +51,20 @@ module.exports = (env) => {
     plugins,
     module: {
       rules: [{
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader']
-        })
-      }, {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'postcss-loader', 'sass-loader']
+          use: ['css-loader', 'postcss-loader']
         })
       }, {
         test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
-        use: 'file-loader'
+        use: ['file-loader']
       }, {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: ['babel-loader']
       }
       ]
-    },
-    devServer: {
-      inline: true,
-    },
+    }
   };
 };
