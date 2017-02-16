@@ -1,0 +1,25 @@
+/* テーマカラー*/
+$primary-color: #f04829;
+
+/* ボタン */
+.button {
+    background-color: $primary-color;
+    &:active {
+        background-color: $primary-color;
+        opacity: 0.2
+    }
+    &--material {
+        background-color: $primary-color;
+        &:active {
+            background-color: $primary-color;
+            opacity: 0.2
+        }
+    }
+} 
+
+/* ナビゲーションバー */
+.navigation-bar {
+    &--material {
+        background-color: $primary-color;
+    }
+}

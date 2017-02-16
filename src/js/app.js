@@ -12,7 +12,7 @@ import Page1Controller from './controllers/page1.controller';
 import Page2Controller from './controllers/page2.controller';
 
 // スタイル
-import '../css/style.scss';
+import '../scss/style.scss';
 
 // 起動
 ons.bootstrap('app', ['onsen']);
