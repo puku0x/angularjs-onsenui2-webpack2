@@ -4,13 +4,13 @@
   "description": "AngularJS + Onsen UI 2 + Webpack2 + PhoneGap + ES2016 + SCSS/cssnext",
   "main": "src/js/app.js",
   "scripts": {
-    "build": "webpack --progress --colors",
-    "build:prod": "webpack --progress --colors --env.prod=true",
+    "build": "webpack --progress --colors --env.prod=true",
+    "build:dev": "webpack --progress --colors",
     "build:watch": "webpack --progress --colors --watch",
     "phonegap": "phonegap",
     "serve": "phonegap serve",
     "prepare": "phonegap prepare",
-    "preprepare": "npm run build:prod",
+    "preprepare": "npm run build",
     "start": "npm run build:watch & npm run serve"
   },
   "keywords": ["AngularJS", "cssnext", "ES2016", "Onsen UI", "PhoneGap", "PostCSS", "SCSS", "Webpack", "Yarn"],
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.1",
+    "babel-loader": "^6.3.2",
     "babel-plugin-angularjs-annotate": "^0.7.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-es2016": "^6.22.0",

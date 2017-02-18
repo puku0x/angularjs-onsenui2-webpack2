@@ -5,9 +5,9 @@ node_js:
   - "6"
 
 install:
-  - npm install -g phonegap webpack
-  - npm install
-  - npm run build
+  - npm install -g yarn
+  - yarn
+  - yarn build
 
 before_script:
 
