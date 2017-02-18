@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = (env) => {
+module.exports = function(env) {
   // プロダクションビルド判定
   const nodeEnv = env && env.prod ? 'production' : 'development';
   const isProd = nodeEnv === 'production';
@@ -18,9 +18,10 @@ module.exports = (env) => {
       allChunks: true
     }),
     new webpack.DefinePlugin({
-      'process.env': { NODE_ENV: JSON.stringify(nodeEnv) }
+      'process.env': {
+        NODE_ENV: JSON.stringify(nodeEnv)
+      }
     })
-    //new webpack.NamedModulesPlugin(),
   ];
 
   // プロダクションビルド用プラグイン追加
@@ -40,7 +41,7 @@ module.exports = (env) => {
 
   return {
     entry: {
-      app: './src/js/app.js',
+      app: path.join(__dirname, '/src/js/app.js'),
       vendor: ['angular', 'onsenui'],
     },
     output: {
@@ -48,6 +49,9 @@ module.exports = (env) => {
       filename: 'bundle.js',
     },
     devtool: isProd ? false : 'inline-source-map',
+    resolve: {
+      extensions: [".js", ".json", ".css", ".scss"],
+    },
     plugins,
     module: {
       rules: [{

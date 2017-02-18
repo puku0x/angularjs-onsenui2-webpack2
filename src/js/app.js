@@ -4,15 +4,16 @@ import angular from 'angular';
 // OnsenUI
 window.ons = require('onsenui');
 require('onsenui/js/angular-onsenui');
-import 'onsenui/css/onsenui.css';
-import 'onsenui/css/onsen-css-components.css';
+import 'onsenui/css/onsenui';
+import 'onsenui/css/onsen-css-components';
 
 // コントローラ
 import Page1Controller from './controllers/page1.controller';
 import Page2Controller from './controllers/page2.controller';
 
 // スタイル
-import '../scss/style.scss';
+import '../css/style';
+//import '../scss/style';
 
 // 起動
 ons.bootstrap('app', ['onsen']);
