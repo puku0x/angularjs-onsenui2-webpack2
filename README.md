@@ -3,7 +3,7 @@
 [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 # AngularJS + Onsen UI 2 + Webpack2 + PhoneGap
 
-[PhoneGap](http://phonegap.com/) を使ったハイブリッドアプリのひな形に [Webpack](https://webpack.github.io/) による SCSS/cssnext と ES2016 のトランスパイルを組み込んだもの。
+[PhoneGap](http://phonegap.com/) を使ったハイブリッドアプリのひな形に [Webpack](https://webpack.github.io/) による SCSS/cssnext と ES2017 のトランスパイルを組み込んだもの。
 
 ビルドツールは npm と Webpack のみ。
 
