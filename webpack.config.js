@@ -62,7 +62,7 @@ module.exports = function(env) {
         })
       }, {
         test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
-        use: ['file-loader']
+        use: ['url-loader']
       }, {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
