@@ -1,8 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = function(env) {
+module.exports = (env) => {
   // プロダクションビルド判定
   const nodeEnv = env && env.prod ? 'production' : 'development';
   const isProd = nodeEnv === 'production';
@@ -16,6 +17,11 @@ module.exports = function(env) {
     new ExtractTextPlugin({
       filename: "bundle.css",
       allChunks: true
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'head',
+      template: path.join(__dirname, '/src/index.html'),
+      filename: path.join(__dirname, '/www/index.html')
     }),
     new webpack.DefinePlugin({
       'process.env': {
@@ -50,7 +56,7 @@ module.exports = function(env) {
     },
     devtool: isProd ? false : 'inline-source-map',
     resolve: {
-      extensions: [".js", ".json", ".css", ".scss"],
+      extensions: [".html",".js", ".json", ".css", ".scss"],
     },
     plugins,
     module: {
@@ -61,7 +67,18 @@ module.exports = function(env) {
           use: ['css-loader', 'postcss-loader']
         })
       }, {
+        test: /\.html?$/,
+        use: [{
+          loader: 'html-loader',
+          options: {
+            minimize: isProd
+          }
+        }]
+      }, {
         test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
+        use: ['url-loader']
+      }, {
+        test: /\.(jpe?g|png|gif|svg)$/i,
         use: ['url-loader']
       }, {
         test: /\.js$/,

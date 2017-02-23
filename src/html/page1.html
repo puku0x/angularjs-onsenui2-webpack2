@@ -1,10 +1,11 @@
 <ons-page ng-controller="Page1Controller as ctrl" ons-init="ctrl.init($event)">
- 
+    <!-- ツールバー -->
     <ons-toolbar>
         <div class="center">{{ctrl.title}}</div>
     </ons-toolbar>
-
+    
     <p>This is the first page.</p>
 
+    <!-- ボタン -->
     <ons-button ng-click="ctrl.push()">Push page</ons-button>
 </ons-page>
