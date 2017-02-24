@@ -16,8 +16,10 @@ import '../css/style';
 //import '../scss/style';
 
 // ページテンプレート
-import Page1Template from '../html/page1';
-import Page2Template from '../html/page2';
+import '../html/page1';
+import'../html/page2';
+import'../html/splitter-side';
+import'../html/splitter-content';
 
 // 起動
 ons.bootstrap('app', ['onsen']);
@@ -26,9 +28,4 @@ ons.bootstrap('app', ['onsen']);
 angular
     .module('app')
     .controller('Page1Controller', Page1Controller)
-    .controller('Page2Controller', Page2Controller)
-    .run(($templateCache) => {
-        /* @ngInject */
-        $templateCache.put('pages/page1.html', Page1Template);
-        $templateCache.put('pages/page2.html', Page2Template);
-    })  
+    .controller('Page2Controller', Page2Controller);

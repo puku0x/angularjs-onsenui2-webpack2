@@ -1,6 +1,13 @@
 <ons-page ng-controller="Page2Controller as ctrl" ons-init="ctrl.init($event)">
     <!-- ツールバー -->
     <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button ng-click="ctrl.pop()">
+                <ons-icon icon="ion-ios-arrow-back, material:md-arrow-back" size="32px, material:24px"></ons-icon>
+                <ons-if platform="ios other" class="back-button__label">Back</ons-if>
+            </ons-toolbar-button>
+        </div>
+
         <div class="center">{{ctrl.title}}</div>
     </ons-toolbar>
 

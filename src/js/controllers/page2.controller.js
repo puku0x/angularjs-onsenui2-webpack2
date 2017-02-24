@@ -14,13 +14,13 @@ export default class Page2Controller {
     }
 
     // 初期化
-    init() {
+    init($event) {
         this.$timeout(() => {
             // 変数
             this.navigator = this.$window.navi;
 
             // ページタイトル設定
-            const page = this.navigator.topPage;
+            const page = $event.target;
             this.title = page.data.title;
         });
     }

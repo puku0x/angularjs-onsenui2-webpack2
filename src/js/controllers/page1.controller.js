@@ -14,7 +14,7 @@ export default class Page1Controller {
                 title: 'Page 2'
             }
         };
-        this.navigator.pushPage('pages/page2.html', options);
+        this.navigator.pushPage('html/page2.html', options);
         this.$log.debug('Push page');
     }
 

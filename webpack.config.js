@@ -20,8 +20,12 @@ module.exports = (env) => {
     }),
     new HtmlWebpackPlugin({
       inject: 'head',
-      template: path.join(__dirname, '/src/index.html'),
-      filename: path.join(__dirname, '/www/index.html')
+      template: path.join(__dirname, '/src/index.ejs'),
+      filename: path.join(__dirname, '/www/index.html'),
+      minify: {
+        removeComments: isProd,
+        collapseWhitespace: isProd
+      }
     }),
     new webpack.DefinePlugin({
       'process.env': {
@@ -56,7 +60,7 @@ module.exports = (env) => {
     },
     devtool: isProd ? false : 'inline-source-map',
     resolve: {
-      extensions: [".html",".js", ".json", ".css", ".scss"],
+      extensions: [".html", ".js", ".json", ".css", ".scss"],
     },
     plugins,
     module: {
@@ -67,14 +71,6 @@ module.exports = (env) => {
           use: ['css-loader', 'postcss-loader']
         })
       }, {
-        test: /\.html?$/,
-        use: [{
-          loader: 'html-loader',
-          options: {
-            minimize: isProd
-          }
-        }]
-      }, {
         test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
         use: ['url-loader']
       }, {
@@ -84,6 +80,21 @@ module.exports = (env) => {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: ['babel-loader']
+      }, {
+        test: /\.html?$/,
+        use: [
+          {
+            loader: 'ngtemplate-loader',
+            options: {
+              relativeTo: path.join(__dirname, '/src/')
+            }
+          },
+          {
+            loader: 'html-loader',
+            options: {
+              minimize: isProd
+            }
+          }]
       }
       ]
     }

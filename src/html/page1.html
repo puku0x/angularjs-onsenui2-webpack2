@@ -1,11 +1,7 @@
 <ons-page ng-controller="Page1Controller as ctrl" ons-init="ctrl.init($event)">
-    <!-- ツールバー -->
-    <ons-toolbar>
-        <div class="center">{{ctrl.title}}</div>
-    </ons-toolbar>
-    
-    <p>This is the first page.</p>
-
-    <!-- ボタン -->
-    <ons-button ng-click="ctrl.push()">Push page</ons-button>
+    <!-- スプリッタ -->
+    <ons-splitter var="splitter">
+        <ons-splitter-side page="html/splitter-side.html" side="left" width="220px" collapse swipeable></ons-splitter-side>
+        <ons-splitter-content page="html/splitter-content.html"></ons-splitter-content>
+    </ons-splitter>
 </ons-page>
