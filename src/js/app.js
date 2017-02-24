@@ -15,11 +15,11 @@ import Page2Controller from './controllers/page2.controller';
 import '../css/style';
 //import '../scss/style';
 
-// ページテンプレート
+// ページ (自動で$templateCacheに追加)
 import '../html/page1';
-import'../html/page2';
-import'../html/splitter-side';
-import'../html/splitter-content';
+import '../html/page2';
+import '../html/splitter-side';
+import '../html/splitter-content';
 
 // 起動
 ons.bootstrap('app', ['onsen']);

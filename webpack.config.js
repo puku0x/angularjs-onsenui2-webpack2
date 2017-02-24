@@ -82,21 +82,18 @@ module.exports = (env) => {
         use: ['babel-loader']
       }, {
         test: /\.html?$/,
-        use: [
-          {
-            loader: 'ngtemplate-loader',
-            options: {
-              relativeTo: path.join(__dirname, '/src/')
-            }
-          },
-          {
-            loader: 'html-loader',
-            options: {
-              minimize: isProd
-            }
-          }]
-      }
-      ]
+        use: [{
+          loader: 'ngtemplate-loader',
+          options: {
+            relativeTo: path.join(__dirname, '/src/')
+          }
+        }, {
+          loader: 'html-loader',
+          options: {
+            minimize: isProd
+          }
+        }]
+      }]
     }
   };
 };
