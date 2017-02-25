@@ -8,12 +8,15 @@
                 <ons-if platform="ios other" class="back-button__label">Back</ons-if>
             </ons-toolbar-button>
         </div>
-
+        <!-- タイトル -->
         <div class="center">{{ctrl.title}}</div>
     </ons-toolbar>
 
-    <p>This is the second page.</p>
+    <!-- ジェスチャ -->
+    <ons-gesture-detector ng-swiperight="ctrl.pop()">
+        <p>This is the second page.</p>
 
-    <!-- ボタン -->
-    <ons-button ng-click="ctrl.pop()">Pop page</ons-button>
+        <!-- ボタン -->
+        <ons-button ng-click="ctrl.pop()">Pop page</ons-button>
+    </ons-gesture-detector>
 </ons-page>

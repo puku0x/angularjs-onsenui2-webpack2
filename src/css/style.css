@@ -25,3 +25,8 @@
         background-color: var(--primary-color);
     }
 }
+
+/* スプリッタの横の枠線 */
+ons-splitter-side[mode="split"] {
+    border-right: solid 1px #eee;
+}

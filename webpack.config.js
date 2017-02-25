@@ -23,8 +23,7 @@ module.exports = (env) => {
       template: path.join(__dirname, '/src/index.ejs'),
       filename: path.join(__dirname, '/www/index.html'),
       minify: {
-        removeComments: isProd,
-        collapseWhitespace: isProd
+        removeComments: isProd
       }
     }),
     new webpack.DefinePlugin({
@@ -82,18 +81,21 @@ module.exports = (env) => {
         use: ['babel-loader']
       }, {
         test: /\.html?$/,
-        use: [{
-          loader: 'ngtemplate-loader',
-          options: {
-            relativeTo: path.join(__dirname, '/src/')
-          }
-        }, {
-          loader: 'html-loader',
-          options: {
-            minimize: isProd
-          }
-        }]
-      }]
+        use: [
+          {
+            loader: 'ngtemplate-loader',
+            options: {
+              relativeTo: path.join(__dirname, '/src/')
+            }
+          },
+          {
+            loader: 'html-loader',
+            options: {
+              minimize: isProd
+            }
+          }]
+      }
+      ]
     }
   };
 };

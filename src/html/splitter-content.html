@@ -2,10 +2,11 @@
     <!-- ツールバー -->
     <ons-toolbar>
         <div class="left">
-            <ons-toolbar-button ng-click="splitter.left.open()">
-                <ons-icon icon="md-menu"></ons-icon>
+            <ons-toolbar-button ng-click="splitter.left.open()" ons-if-orientation="portrait">
+                <ons-icon icon="ion-navicon, material:md-menu" size="32px, material:24px">
             </ons-toolbar-button>
         </div>
+        <!-- タイトル -->
         <div class="center">Page1 (splitter-content)</div>
     </ons-toolbar>
 
