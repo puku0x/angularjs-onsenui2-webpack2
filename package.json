@@ -1,5 +1,5 @@
 {
-  "name": "angular-onsenui2-webpack2",
+  "name": "angularjs-onsenui2-webpack2",
   "version": "1.0.0",
   "description": "AngularJS + Onsen UI 2 + Webpack2 + PhoneGap + ES2016 + SCSS/cssnext",
   "main": "src/js/app.js",
